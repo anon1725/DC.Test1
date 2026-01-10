@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AccessFormData, StaffType, AdditionalStaff, Ticket, TicketStatus, EditLog } from './types';
+import { AccessFormData, StaffType, AdditionalStaff, Ticket, TicketStatus, EditLog } from './types.ts';
 
 const MOCK_TICKETS: Ticket[] = [
   {

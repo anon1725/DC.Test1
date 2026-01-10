@@ -36,8 +36,8 @@
   <style>
     body {
       background-color: #ffffff;
-      /* Datacenter Technical Doodles: Racks, DBs, Cables, Chips, Clouds */
-      background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%2384cc16' stroke-width='1.2' stroke-opacity='0.12'%3E%3C!-- Rack --%3E%3Cpath d='M20 20 h25 v40 h-25 z M20 30 h25 M20 40 h25 M20 50 h25'/%3E%3C!-- Database --%3E%3Cpath d='M140 30 c0 3 8 3 16 0 M140 30 c0-3 8-3 16 0 v12 c0 3-8 3-16 0 z'/%3E%3C!-- Chip --%3E%3Cpath d='M80 140 h20 v20 h-20 z M77 145 h3 M77 150 h3 M77 155 h3 M100 145 h3 M100 150 h3 M100 155 h3 M85 137 v3 M90 137 v3 M95 137 v3 M85 160 v3 M90 160 v3 M95 160 v3'/%3E%3C!-- Network --%3E%3Cpath d='M150 150 a10 10 0 0 1 20 0 M155 150 a5 5 0 0 1 10 0 M160 150 l0 -2'/%3E%3C!-- Cable --%3E%3Cpath d='M30 110 q10 20 40 0 t40 20'/%3E%3C!-- Binary Elements --%3E%3Ctext x='10' y='180' font-family='monospace' font-size='10' fill='%2384cc16' fill-opacity='0.1'%3E0101%3C/text%3E%3Ctext x='170' y='20' font-family='monospace' font-size='10' fill='%2384cc16' fill-opacity='0.1'%3E10%3C/text%3E%3C!-- Cloud --%3E%3Cpath d='M80 40 a5 5 0 0 1 10 0 a5 5 0 0 1 5 8 h-20 a5 5 0 0 1 5-8'/%3E%3C/g%3E%3C/svg%3E");
+      /* Detailed Datacenter Doodles: Racks, Ethernet, Tools, Screens */
+      background-image: url("data:image/svg+xml,%3Csvg width='240' height='240' viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%2384cc16' stroke-width='1.5' stroke-opacity='0.18' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Server Rack --%3E%3Cpath d='M20 30 h30 v60 h-30 z M20 42 h30 M20 54 h30 M20 66 h30 M20 78 h30 M24 36 a1 1 0 1 0 2 0 a1 1 0 1 0 -2 0'/%3E%3C!-- Monitor --%3E%3Cpath d='M160 40 h35 v25 h-35 z M172 65 l-2 5 h10 l-2 -5'/%3E%3C!-- Keyboard --%3E%3Cpath d='M155 85 h45 v12 h-45 z M160 90 h3 M166 90 h3 M172 90 h3 M178 90 h3 M184 90 h3 M190 90 h3'/%3E%3C!-- Ethernet Port --%3E%3Cpath d='M100 20 h20 v16 h-20 z M104 24 v8 M108 24 v8 M112 24 v8 M116 24 v8'/%3E%3C!-- Screwdriver --%3E%3Cpath d='M40 160 l15 -15 M55 145 l4 -4 M58 142 l4 4'/%3E%3Ccircle cx='40' cy='160' r='3'/%3E%3C!-- LAN Cable --%3E%3Cpath d='M120 120 c20 -10 40 30 60 10 M180 130 h8 v8 h-8 z'/%3E%3C!-- Circuit Trace --%3E%3Cpath d='M30 200 h40 v-20 h20'/%3E%3Ccircle cx='30' cy='200' r='2' fill='%2384cc16' fill-opacity='0.18'/%3E%3Ccircle cx='90' cy='180' r='2' fill='%2384cc16' fill-opacity='0.18'/%3E%3C!-- Binary Elements --%3E%3Ctext x='100' y='210' font-family='monospace' font-size='12' fill='%2384cc16' fill-opacity='0.15'%3E01%3C/text%3E%3Ctext x='200' y='180' font-family='monospace' font-size='12' fill='%2384cc16' fill-opacity='0.15'%3E101%3C/text%3E%3C!-- Switch --%3E%3Cpath d='M80 70 h50 v10 h-50 z M85 75 h4 M95 75 h4 M105 75 h4 M115 75 h4'/%3E%3C/g%3E%3C/svg%3E");
       min-height: 100vh;
       background-attachment: fixed;
     }
@@ -81,7 +81,8 @@
   "imports": {
     "react": "https://esm.sh/react@^19.2.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/"
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.1"
   }
 }
 </script>
@@ -89,6 +90,7 @@
 </head>
 <body class="font-cairo text-brand-slate">
   <div id="root"></div>
+  <script type="module" src="./index.tsx"></script>
 <script type="module" src="/index.tsx"></script>
 </body>
 </html>
