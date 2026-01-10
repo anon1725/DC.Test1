@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jawwal Access Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              lime: '#84cc16',
+              blue: '#2563eb',
+              slate: '#0f172a',
+            }
+          },
+          animation: {
+            'slide-up': 'slideUp 0.5s ease-out forwards',
+          },
+          keyframes: {
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #ffffff;
+      /* Datacenter Technical Doodles: Racks, DBs, Cables, Chips, Clouds */
+      background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%2384cc16' stroke-width='1.2' stroke-opacity='0.12'%3E%3C!-- Rack --%3E%3Cpath d='M20 20 h25 v40 h-25 z M20 30 h25 M20 40 h25 M20 50 h25'/%3E%3C!-- Database --%3E%3Cpath d='M140 30 c0 3 8 3 16 0 M140 30 c0-3 8-3 16 0 v12 c0 3-8 3-16 0 z'/%3E%3C!-- Chip --%3E%3Cpath d='M80 140 h20 v20 h-20 z M77 145 h3 M77 150 h3 M77 155 h3 M100 145 h3 M100 150 h3 M100 155 h3 M85 137 v3 M90 137 v3 M95 137 v3 M85 160 v3 M90 160 v3 M95 160 v3'/%3E%3C!-- Network --%3E%3Cpath d='M150 150 a10 10 0 0 1 20 0 M155 150 a5 5 0 0 1 10 0 M160 150 l0 -2'/%3E%3C!-- Cable --%3E%3Cpath d='M30 110 q10 20 40 0 t40 20'/%3E%3C!-- Binary Elements --%3E%3Ctext x='10' y='180' font-family='monospace' font-size='10' fill='%2384cc16' fill-opacity='0.1'%3E0101%3C/text%3E%3Ctext x='170' y='20' font-family='monospace' font-size='10' fill='%2384cc16' fill-opacity='0.1'%3E10%3C/text%3E%3C!-- Cloud --%3E%3Cpath d='M80 40 a5 5 0 0 1 10 0 a5 5 0 0 1 5 8 h-20 a5 5 0 0 1 5-8'/%3E%3C/g%3E%3C/svg%3E");
+      min-height: 100vh;
+      background-attachment: fixed;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .input-focus-effect {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .input-focus-effect:focus {
+      border-color: #84cc16;
+      background: white;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 15px -3px rgba(132, 204, 22, 0.1);
+    }
+    .btn-submit-style {
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+    }
+    .btn-submit-style:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.1);
+    }
+    /* Custom Scrollbar for the Audit Log */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #e2e8f0;
+      border-radius: 10px;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-cairo text-brand-slate">
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
